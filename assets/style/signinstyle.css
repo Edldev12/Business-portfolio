@@ -1,21 +1,36 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #ffffff;
+    overflow-x: hidden;
 }
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-
 }
+
+/* =========================
+   LEFT SIDE
+========================= */
+
 .left {
     width: 65%;
     padding: 20px;
@@ -23,116 +38,567 @@ body {
     justify-content: center;
     align-items: center;
 }
-.left img{
+
+.left img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    display: block;
 }
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
 .right {
     width: 35%;
     padding: 20px;
 }
+
+/* =========================
+   SIGN IN FORM
+========================= */
+
 .signin-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin: 20px auto;
     padding: 16px;
     background-color: #111111;
-
 }
+
+/* =========================
+   LABEL
+========================= */
+
 .signin-form label {
     margin-bottom: 8px;
     font-weight: bold;
-    background-color: #111111;
 }
+
+/* =========================
+   INPUT
+========================= */
+
 .signin-form input {
+    width: 100%;
     margin-bottom: 16px;
     padding: 10px;
-    border: none;
-    width: 100%;
-    border-radius: 8px;
-    box-sizing: border-box;
     background-color: #1e1e1e;
     border: 1px solid #515050;
+    border-radius: 8px;
     color: #ffffff;
 }
+
+.signin-form input::placeholder {
+    color: #7c8290;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
 .signin-form button {
-    padding: 12px;
-    background: linear-gradient( 270deg, #3bb2f6, #1696ec);
-    color: #ffffff;
     width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    background: linear-gradient(
+        270deg,
+        #3bb2f6,
+        #1696ec
+    );
+
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin: 10px, 0;
 }
+
+/* =========================
+   HEADINGS
+========================= */
+
 h1 {
-    
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
 }
+
 h4 {
     text-align: center;
     margin: 10px;
 }
+
+/* =========================
+   LINKS
+========================= */
+
 .link-container {
     width: 100%;
-    text-align: center; /* Centers inline elements inside it */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10px;
-    margin:10px;
+    gap: 10px;
+    margin: 10px;
+    text-align: center;
 }
 
 a {
     color: #3bb2f6;
     text-decoration: none;
 }
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+.mobile-header {
+    display: none;
+}
+
+/* =========================
+   REMEMBER ME
+========================= */
+
 .remember-me {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: #ffffff;
     font-size: 14px;
     cursor: pointer;
 }
 
-/* Hide the real checkbox */
 .remember-me input {
     display: none;
 }
 
-/* Switch */
+/* =========================
+   SWITCH
+========================= */
+
 .switch {
     width: 34px;
     height: 18px;
-    background: #555;
+    background: #555555;
     border-radius: 20px;
     position: relative;
     transition: 0.3s;
 }
 
-/* Circle */
 .switch::before {
     content: "";
+
     width: 14px;
     height: 14px;
-    background: white;
+
+    background: #ffffff;
+
     border-radius: 50%;
+
     position: absolute;
+
     top: 2px;
     left: 2px;
+
     transition: 0.3s;
 }
 
-/* ON state */
+/* Switch ON */
+
 .remember-me input:checked + .switch {
     background: #2196f3;
 }
 
 .remember-me input:checked + .switch::before {
     transform: translateX(16px);
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   768px AND BELOW
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: #10131b;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       MOBILE HEADER
+    ========================= */
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 115px;
+
+        padding: 0 30px;
+
+        background-color: #1c1f27;
+    }
+
+    .mobile-header h2 {
+        margin: 0;
+        font-size: 44px;
+        color: #a9c4ff;
+    }
+
+    .menu-icon {
+        font-size: 38px;
+        color: #a9c4ff;
+    }
+
+    .header-icon {
+        font-size: 38px;
+        color: #c5c9d5;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================= */
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-height: 100vh;
+
+        align-items: center;
+    }
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .left {
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .left img {
+        width: 100%;
+        height: 350px;
+
+        object-fit: cover;
+        display: block;
+
+        filter: brightness(35%);
+    }
+
+    /* =========================
+       RIGHT SIDE
+    ========================= */
+
+    .right {
+        width: 100%;
+        padding: 0 29px;
+
+        margin-top: -1px;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    /* =========================
+       SIGN IN FORM
+    ========================= */
+
+    .signin-form {
+        width: 100%;
+        max-width: 650px;
+
+        margin: 0 auto;
+        padding: 30px;
+
+        background-color: #1e1e1e;
+
+        border-radius: 28px;
+    }
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    h1 {
+        text-align: left;
+
+        font-size: 48px;
+
+        margin: 0 0 55px 0;
+        padding: 0;
+    }
+
+    h4 {
+        text-align: left;
+    }
+
+    /* =========================
+       LABEL
+    ========================= */
+
+    .signin-form label {
+        font-size: 25px;
+        font-weight: normal;
+
+        margin-bottom: 12px;
+    }
+
+    /* =========================
+       INPUT
+    ========================= */
+
+    .signin-form input {
+        width: 100%;
+
+        height: 76px;
+
+        padding: 15px 22px;
+
+        margin-bottom: 35px;
+
+        background-color: #111111;
+
+        border: 2px solid #3e4655;
+        border-radius: 14px;
+
+        color: #ffffff;
+
+        font-size: 24px;
+    }
+
+    .signin-form input::placeholder {
+        color: #7c8290;
+    }
+
+    /* =========================
+       REMEMBER ME
+    ========================= */
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+
+        gap: 15px;
+
+        margin: 5px 0 45px 0;
+
+        font-size: 23px;
+    }
+
+    /* =========================
+       LARGE SWITCH
+    ========================= */
+
+    .switch {
+        width: 72px;
+        height: 44px;
+
+        border-radius: 30px;
+    }
+
+    .switch::before {
+        width: 32px;
+        height: 32px;
+
+        top: 6px;
+        left: 6px;
+    }
+
+    .remember-me input:checked + .switch::before {
+        transform: translateX(28px);
+    }
+
+    /* =========================
+       SIGN IN BUTTON
+    ========================= */
+
+    .signin-form button {
+        width: 100%;
+
+        height: 90px;
+
+        margin: 0 0 45px 0;
+
+        border-radius: 14px;
+
+        background: linear-gradient(
+            90deg,
+            #3184f5,
+            #5ca8f7
+        );
+
+        font-size: 30px;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .link-container {
+        width: 100%;
+
+        margin: 0;
+
+        gap: 35px;
+
+        font-size: 22px;
+    }
+
+    a {
+        color: #9bb9ee;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   400px AND BELOW
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    /* =========================
+       MOBILE HEADER
+    ========================= */
+
+    .mobile-header {
+        width: 100%;
+        height: 100px;
+
+        display: flex;
+
+        padding: 0 20px;
+    }
+
+    .mobile-header h2 {
+        font-size: 32px;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .header-icon {
+        font-size: 30px;
+    }
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .left img {
+        height: 300px;
+    }
+
+    /* =========================
+       RIGHT
+    ========================= */
+
+    .right {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .signin-form {
+        width: 100%;
+
+        padding: 25px;
+
+        border-radius: 24px;
+    }
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    h1 {
+        font-size: 42px;
+
+        margin-bottom: 45px;
+    }
+
+    /* =========================
+       LABEL
+    ========================= */
+
+    .signin-form label {
+        font-size: 21px;
+    }
+
+    /* =========================
+       INPUT
+    ========================= */
+
+    .signin-form input {
+        height: 65px;
+
+        font-size: 20px;
+
+        padding: 12px 18px;
+    }
+
+    /* =========================
+       REMEMBER ME
+    ========================= */
+
+    .remember-me {
+        font-size: 19px;
+    }
+
+    /* =========================
+       SWITCH
+    ========================= */
+
+    .switch {
+        width: 62px;
+        height: 38px;
+    }
+
+    .switch::before {
+        width: 28px;
+        height: 28px;
+
+        top: 5px;
+        left: 5px;
+    }
+
+    .remember-me input:checked + .switch::before {
+        transform: translateX(24px);
+    }
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .signin-form button {
+        height: 75px;
+
+        font-size: 26px;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .link-container {
+        font-size: 18px;
+
+        gap: 28px;
+    }
 }
