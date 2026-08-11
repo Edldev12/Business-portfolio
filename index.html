@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <nav class="menu">
+
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-table"></i>
+                <span>Tables</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Billing</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>RTL</span>
+            </a>
+
+            <div class="space"></div>
+
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-lock"></i>
+                <span>Sign In</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Sign Up</span>
+            </a>
+
+        </nav>
+
+        <div class="help">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Need help?</span>
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Type here..."
+                >
+            </div>
+
+            <img
+                class="profile-img"
+                src="https://i.pravatar.cc/100?img=12"
+                alt="Profile"
+            >
+
+            <i class="fa-solid fa-gear top-icon"></i>
+
+            <i class="fa-solid fa-bell top-icon notification"></i>
+
+        </header>
+
+
+        <!-- =========================
+             STAT CARDS
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat-card money">
+
+                <div class="stat-info">
+                    <span>Today's Money</span>
+                    <strong>$53,000</strong>
+                </div>
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card users">
+
+                <div class="stat-info">
+                    <span>Today's Users</span>
+                    <strong>2,300</strong>
+                </div>
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card clients">
+
+                <div class="stat-info">
+                    <span>New Clients</span>
+                    <strong>+3,052</strong>
+                </div>
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card sales">
+
+                <div class="stat-info">
+                    <span>Total Sales</span>
+                    <strong>$173,000</strong>
+                </div>
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TOP CARDS
+        ========================== -->
+
+        <section class="top-cards">
+
+            <!-- WELCOME -->
+
+            <article class="card welcome">
+
+                <div class="welcome-header">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=12"
+                        alt="Mark Johnson"
+                    >
+
+                    <div>
+                        <span>Welcome back,</span>
+                        <h1>Mark Johnson</h1>
+                    </div>
+
+                </div>
+
+                <p class="welcome-text">
+                    Welcome to Mark Johnson. Welcome a high-quality
+                    professional portrait. We help you to orant your
+                    mosroon, enonging and benefits.
+                </p>
+
+                <a href="#" class="record-btn">
+                    Tap to record
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- FEEDBACK -->
+
+            <article class="card feedback">
+
+                <h2 class="card-title">
+                    Customer Feedback
+                </h2>
+
+                <div class="quote">
+                    “
+                </div>
+
+                <p class="feedback-text">
+                    "Excellent service and intuitive
+                    platform! Highly recommend."
+                </p>
+
+                <p class="customer-name">
+                    - Sarah L.
+                </p>
+
+            </article>
+
+
+            <!-- REFERRALS -->
+
+            <article class="card referrals">
+
+                <div class="referral-heading">
+
+                    <h2 class="card-title">
+                        Recent Referrals
+                    </h2>
+
+                    <span class="dots">•••</span>
+
+                </div>
+
+                <img
+                    class="referral-img"
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+                    alt="Business meeting"
+                >
+
+                <h3>Recent Referrals</h3>
+
+                <p>
+                    John D., Emily K., Michael B., Jessica R.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             BOTTOM
+        ========================== -->
+
+        <section class="bottom">
+
+            <!-- PERFORMANCE -->
+
+            <article class="card performance">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80"
+                    alt="Global performance meeting"
+                >
+
+                <div class="performance-info">
+
+                    <h2>
+                        Global Performance Summary
+                    </h2>
+
+                    <p>
+                        Our global strategy shows significant growth
+                        and positive market impact in Q3.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CUSTOMERS -->
+
+            <article class="card customers">
+
+                <div class="customer">
+
+                    <img
+                        src="https://i.pravatar.cc/300?img=47"
+                        alt="Alice"
+                    >
+
+                    <h3>Alice M.</h3>
+
+                    <p class="status">
+                        Active Now
+                    </p>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <img
+                        src="https://i.pravatar.cc/300?img=11"
+                        alt="Bob"
+                    >
+
+                    <h3>Bob S.</h3>
+
+                    <p class="status">
+                        Active Now
+                    </p>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <img
+                        src="https://i.pravatar.cc/300?img=5"
+                        alt="Charlie"
+                    >
+
+                    <h3>Charlie H.</h3>
+
+                    <p class="status">
+                        Active Now
+                    </p>
+
+                </div>
+
+
+                <div class="customer">
+
+                    <img
+                        src="https://i.pravatar.cc/300?img=44"
+                        alt="Diana"
+                    >
+
+                    <h3>Diana W.</h3>
+
+                    <p class="status">
+                        Active Now
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
