@@ -210,6 +210,7 @@ Possible future improvements include:
 ### 👨‍💻 Author
 
 Edlawit Tsegaye
+https://github.com/Edldev12
 
 Software Engineering Student
 Frontend Development Learner
